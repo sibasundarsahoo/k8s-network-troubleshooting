@@ -1,0 +1,20 @@
+=== pod/cilium-ng24j
+=== pod/cilium-tq5dq
+Nov 20 07:18:49.299: demo/frontend-7f6b8dff54-ccd7t:52500 (ID:63027) <> demo/backend-5bb489597b-nw546:8080 (ID:15257) policy-verdict:none INGRESS DENIED (TCP Flags: SYN)
+Nov 20 07:18:49.299: demo/frontend-7f6b8dff54-ccd7t:52500 (ID:63027) <> demo/backend-5bb489597b-nw546:8080 (ID:15257) Policy denied DROPPED (TCP Flags: SYN)
+Nov 20 07:18:50.323: demo/frontend-7f6b8dff54-ccd7t:52500 (ID:63027) <> demo/backend-5bb489597b-nw546:8080 (ID:15257) policy-verdict:none INGRESS DENIED (TCP Flags: SYN)
+Nov 20 07:18:50.323: demo/frontend-7f6b8dff54-ccd7t:52500 (ID:63027) <> demo/backend-5bb489597b-nw546:8080 (ID:15257) Policy denied DROPPED (TCP Flags: SYN)
+Nov 20 07:18:54.663: demo/frontend-7f6b8dff54-ccd7t:55852 (ID:63027) <> demo/backend-5bb489597b-nw546:8080 (ID:15257) policy-verdict:none INGRESS DENIED (TCP Flags: SYN)
+Nov 20 07:18:54.663: demo/frontend-7f6b8dff54-ccd7t:55852 (ID:63027) <> demo/backend-5bb489597b-nw546:8080 (ID:15257) Policy denied DROPPED (TCP Flags: SYN)
+Nov 20 07:18:55.667: demo/frontend-7f6b8dff54-ccd7t:55852 (ID:63027) <> demo/backend-5bb489597b-nw546:8080 (ID:15257) policy-verdict:none INGRESS DENIED (TCP Flags: SYN)
+Nov 20 07:18:55.667: demo/frontend-7f6b8dff54-ccd7t:55852 (ID:63027) <> demo/backend-5bb489597b-nw546:8080 (ID:15257) Policy denied DROPPED (TCP Flags: SYN)
+Nov 20 07:18:56.695: demo/frontend-7f6b8dff54-ccd7t:55852 (ID:63027) <> demo/backend-5bb489597b-nw546:8080 (ID:15257) policy-verdict:none INGRESS DENIED (TCP Flags: SYN)
+Nov 20 07:18:56.695: demo/frontend-7f6b8dff54-ccd7t:55852 (ID:63027) <> demo/backend-5bb489597b-nw546:8080 (ID:15257) Policy denied DROPPED (TCP Flags: SYN)
+=== pod/cilium-zdjw5
+EVENTS LOST: HUBBLE_RING_BUFFER CPU(0) 1
+Nov 20 07:18:51.466: demo/frontend-7f6b8dff54-ccd7t:55844 (ID:63027) <> demo/backend-5bb489597b-zxx9t:8080 (ID:15257) policy-verdict:none INGRESS DENIED (TCP Flags: SYN)
+Nov 20 07:18:51.466: demo/frontend-7f6b8dff54-ccd7t:55844 (ID:63027) <> demo/backend-5bb489597b-zxx9t:8080 (ID:15257) Policy denied DROPPED (TCP Flags: SYN)
+Nov 20 07:18:52.471: demo/frontend-7f6b8dff54-ccd7t:55844 (ID:63027) <> demo/backend-5bb489597b-zxx9t:8080 (ID:15257) policy-verdict:none INGRESS DENIED (TCP Flags: SYN)
+Nov 20 07:18:52.471: demo/frontend-7f6b8dff54-ccd7t:55844 (ID:63027) <> demo/backend-5bb489597b-zxx9t:8080 (ID:15257) Policy denied DROPPED (TCP Flags: SYN)
+Nov 20 07:18:53.491: demo/frontend-7f6b8dff54-ccd7t:55844 (ID:63027) <> demo/backend-5bb489597b-zxx9t:8080 (ID:15257) policy-verdict:none INGRESS DENIED (TCP Flags: SYN)
+Nov 20 07:18:53.491: demo/frontend-7f6b8dff54-ccd7t:55844 (ID:63027) <> demo/backend-5bb489597b-zxx9t:8080 (ID:15257) Policy denied DROPPED (TCP Flags: SYN)

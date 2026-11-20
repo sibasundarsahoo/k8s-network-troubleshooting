@@ -1,0 +1,19 @@
+## Pods
+NAME                        READY   STATUS    RESTARTS   AGE   IP             NODE             NOMINATED NODE   READINESS GATES
+backend-5bb489597b-nw546    1/1     Running   0          37m   10.244.1.59    netlab-worker2   <none>           <none>
+backend-5bb489597b-zxx9t    1/1     Running   0          37m   10.244.2.56    netlab-worker    <none>           <none>
+client-85c46b44bb-gmmcj     1/1     Running   0          37m   10.244.1.154   netlab-worker2   <none>           <none>
+frontend-7f6b8dff54-ccd7t   1/1     Running   0          37m   10.244.1.61    netlab-worker2   <none>           <none>
+frontend-7f6b8dff54-qmbsp   1/1     Running   0          37m   10.244.2.226   netlab-worker    <none>           <none>
+## Services/Endpoints
+NAME               TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE
+service/backend    ClusterIP   10.96.138.59   <none>        80/TCP    37m
+service/frontend   ClusterIP   10.96.169.58   <none>        80/TCP    37m
+
+NAME                 ENDPOINTS                           AGE
+endpoints/backend    10.244.1.59:8080,10.244.2.56:8080   37m
+endpoints/frontend   10.244.1.61:80,10.244.2.226:80      37m
+## client -> frontend
+hello from backend
+## frontend -> backend
+hello from backend

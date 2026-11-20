@@ -1,0 +1,48 @@
+## Symptom
+client->frontend: HTTP 504
+frontend->backend: HTTP 000
+command terminated with exit code 28
+
+## Diagnose
+== Pods
+NAME                        READY   STATUS    RESTARTS   AGE   IP             NODE             NOMINATED NODE   READINESS GATES
+backend-5bb489597b-nw546    1/1     Running   0          39m   10.244.1.59    netlab-worker2   <none>           <none>
+backend-5bb489597b-zxx9t    1/1     Running   0          39m   10.244.2.56    netlab-worker    <none>           <none>
+client-85c46b44bb-gmmcj     1/1     Running   0          39m   10.244.1.154   netlab-worker2   <none>           <none>
+frontend-7f6b8dff54-ccd7t   1/1     Running   0          39m   10.244.1.61    netlab-worker2   <none>           <none>
+frontend-7f6b8dff54-qmbsp   1/1     Running   0          39m   10.244.2.226   netlab-worker    <none>           <none>
+== Service
+NAME      TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE
+backend   ClusterIP   10.96.138.59   <none>        80/TCP    39m
+== Endpoints
+NAME      ENDPOINTS                           AGE
+backend   10.244.1.59:8080,10.244.2.56:8080   39m
+== DNS
+Server:		10.96.0.10
+Address:	10.96.0.10:53
+
+
+Name:	backend.demo.svc.cluster.local
+Address: 10.96.138.59
+
+== frontend -> pod IP
+command terminated with exit code 28
+FAILED
+== client -> pod IP
+hello from backend
+== NetworkPolicy
+NAME                        POD-SELECTOR   AGE
+backend-allow-only-client   app=backend    28m
+Name:         backend-allow-only-client
+Namespace:    demo
+Created on:   2026-11-20 06:50:04 +0000 UTC
+Labels:       <none>
+Annotations:  <none>
+Spec:
+  PodSelector:     app=backend
+  Allowing ingress traffic:
+    To Port: 8080/TCP
+    From:
+      PodSelector: app=client
+  Not affecting egress traffic
+  Policy Types: Ingress

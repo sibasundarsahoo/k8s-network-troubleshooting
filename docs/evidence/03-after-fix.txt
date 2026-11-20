@@ -1,0 +1,31 @@
+hello from backend
+hello from backend
+pod/intruder created
+pod/intruder condition met
+command terminated with exit code 28
+BLOCKED (expected)
+pod "intruder" deleted from demo namespace
+## Hubble after fix
+=== pod/cilium-ng24j
+=== pod/cilium-tq5dq
+Nov 20 07:18:55.667: demo/frontend-7f6b8dff54-ccd7t:55852 (ID:63027) <> demo/backend-5bb489597b-nw546:8080 (ID:15257) Policy denied DROPPED (TCP Flags: SYN)
+Nov 20 07:18:56.695: demo/frontend-7f6b8dff54-ccd7t:55852 (ID:63027) <> demo/backend-5bb489597b-nw546:8080 (ID:15257) policy-verdict:none INGRESS DENIED (TCP Flags: SYN)
+Nov 20 07:18:56.695: demo/frontend-7f6b8dff54-ccd7t:55852 (ID:63027) <> demo/backend-5bb489597b-nw546:8080 (ID:15257) Policy denied DROPPED (TCP Flags: SYN)
+Nov 20 07:19:03.762: demo/frontend-7f6b8dff54-ccd7t:56368 (ID:63027) -> demo/backend-5bb489597b-nw546:8080 (ID:15257) policy-verdict:L3-L4 INGRESS ALLOWED (TCP Flags: SYN)
+Nov 20 07:19:03.762: demo/frontend-7f6b8dff54-ccd7t:56368 (ID:63027) -> demo/backend-5bb489597b-nw546:8080 (ID:15257) to-endpoint FORWARDED (TCP Flags: SYN)
+Nov 20 07:19:03.763: demo/frontend-7f6b8dff54-ccd7t:56368 (ID:63027) -> demo/backend-5bb489597b-nw546:8080 (ID:15257) to-endpoint FORWARDED (TCP Flags: ACK)
+Nov 20 07:19:03.763: demo/frontend-7f6b8dff54-ccd7t:56368 (ID:63027) -> demo/backend-5bb489597b-nw546:8080 (ID:15257) to-endpoint FORWARDED (TCP Flags: ACK, PSH)
+Nov 20 07:19:03.763: demo/frontend-7f6b8dff54-ccd7t:56368 (ID:63027) -> demo/backend-5bb489597b-nw546:8080 (ID:15257) to-endpoint FORWARDED (TCP Flags: ACK, FIN)
+Nov 20 07:19:03.764: demo/frontend-7f6b8dff54-ccd7t:56368 (ID:63027) -> demo/backend-5bb489597b-nw546:8080 (ID:15257) to-endpoint FORWARDED (TCP Flags: ACK)
+Nov 20 07:19:05.791: demo/intruder:33508 (ID:15943) -> demo/backend-5bb489597b-zxx9t:8080 (ID:15257) to-overlay FORWARDED (TCP Flags: SYN)
+=== pod/cilium-zdjw5
+Nov 20 07:19:05.791: demo/intruder:33508 (ID:15943) <> demo/backend-5bb489597b-zxx9t:8080 (ID:15257) policy-verdict:none INGRESS DENIED (TCP Flags: SYN)
+Nov 20 07:19:05.791: demo/intruder:33508 (ID:15943) <> demo/backend-5bb489597b-zxx9t:8080 (ID:15257) Policy denied DROPPED (TCP Flags: SYN)
+Nov 20 07:19:06.803: demo/intruder:33508 (ID:15943) <> demo/backend-5bb489597b-zxx9t:8080 (ID:15257) policy-verdict:none INGRESS DENIED (TCP Flags: SYN)
+Nov 20 07:19:06.803: demo/intruder:33508 (ID:15943) <> demo/backend-5bb489597b-zxx9t:8080 (ID:15257) Policy denied DROPPED (TCP Flags: SYN)
+Nov 20 07:19:07.827: demo/intruder:33508 (ID:15943) <> demo/backend-5bb489597b-zxx9t:8080 (ID:15257) policy-verdict:none INGRESS DENIED (TCP Flags: SYN)
+Nov 20 07:19:07.827: demo/intruder:33508 (ID:15943) <> demo/backend-5bb489597b-zxx9t:8080 (ID:15257) Policy denied DROPPED (TCP Flags: SYN)
+Nov 20 07:19:08.851: demo/intruder:33508 (ID:15943) <> demo/backend-5bb489597b-zxx9t:8080 (ID:15257) policy-verdict:none INGRESS DENIED (TCP Flags: SYN)
+Nov 20 07:19:08.851: demo/intruder:33508 (ID:15943) <> demo/backend-5bb489597b-zxx9t:8080 (ID:15257) Policy denied DROPPED (TCP Flags: SYN)
+Nov 20 07:19:09.875: demo/intruder:33508 (ID:15943) <> demo/backend-5bb489597b-zxx9t:8080 (ID:15257) policy-verdict:none INGRESS DENIED (TCP Flags: SYN)
+Nov 20 07:19:09.875: demo/intruder:33508 (ID:15943) <> demo/backend-5bb489597b-zxx9t:8080 (ID:15257) Policy denied DROPPED (TCP Flags: SYN)
